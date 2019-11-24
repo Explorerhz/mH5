@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head {{ HEAD_ATTRS }}>
+    {{
+      HEAD
+    }}
+    <script>
+        const remSize = 7.5;
+        const remHtml = document.documentElement;
+        const remEvent =
+          "orientationchange" in window ? "orientationchange" : "resize";
+        let oldFontSize;
+        function remChange() {
+          const clientWidth = Math.min(window.screen.width, 414);
+          const fontSize = clientWidth / remSize;
+          console.log(window.screen.width, clientWidth, fontSize);
+          if (oldFontSize !== fontSize) {
+            oldFontSize = fontSize;
+            clientWidth && (remHtml.style.fontSize = fontSize + "px");
+          }
+        }
+        remChange();
+        window.addEventListener(remEvent, remChange);
+      </script>
+  </head>
+  <body {{ BODY_ATTRS }}>
+    {{ APP }}
+    <!--baidu tj-->
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?3537e43a08f954616c2fa2e502251cde";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <!-- baidu ocpc -->
+    <script type="text/javascript">
+      window._agl = [];
+      (function() {
+        _agl.push(
+          ["production", "_f7L2XwGXjyszb4d1e2oxPybgD"],
+          [
+            "ext",
+            {
+              userid: 10637080,
+              url:
+                "https://m.tiebaobei.com/ue/wajueji/doosan_dh210w-7_728014.html",
+              exp: "fcocpc"
+            }
+          ]
+        );
+        (function() {
+          var agl = document.createElement("script");
+          agl.type = "text/javascript";
+          agl.async = true;
+          agl.src =
+            "https://fxgate.baidu.com/angelia/fcagl.js?production=_f7L2XwGXjyszb4d1e2oxPybgD&userid=10637080&exp=fcocpc";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(agl, s);
+        })();
+      })();
+    </script>
+  </body>
+</html>

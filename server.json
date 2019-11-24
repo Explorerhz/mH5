@@ -1,0 +1,20 @@
+{
+    "name": "8082-nodejs-m",
+    "script": "server/index.js",
+    "args": "",
+    "cwd": "./",
+    "instances":"4",
+    "watch": [
+    ],
+    "ignore_watch": [
+        "node_modules",
+        "logs"
+    ],
+    "watch_options": {
+        "followSymlinks": false
+    },
+    "error_file": "/data/logs/8083-nodejs-m/app-err.log",
+    "out_file": "/data/logs/8083-nodejs-m/app-out.log",
+    "merge_logs"      : true,
+    "log_date_format" : "YYYY-MM-DD HH:mm Z"
+  }

@@ -1,0 +1,1 @@
+export { isNumber } from './validate/number';

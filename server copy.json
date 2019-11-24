@@ -1,0 +1,19 @@
+{
+    "name": "webApp",
+    "script": "server/index.js",
+    "cwd": "./",
+    "watch": [
+    ],
+    "ignore_watch": [
+        "node_modules",
+        "logs"
+    ],
+    "watch_options": {
+        "followSymlinks": false
+    },
+    "error_file": "./logs/app-err.log",
+    "out_file": "./logs/app-out.log",
+    "env": {
+        "NODE_ENV": "production"
+    }
+  }
